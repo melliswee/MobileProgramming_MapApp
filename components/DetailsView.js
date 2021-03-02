@@ -6,7 +6,7 @@ export default function DetailsView({navigation}) {
 
     const handleClose = () => {
         //navigation.closeDrawer();
-        navigation.navigate('MapView');
+        navigation.navigate('MapViewScreen');
     }
 
   return (
