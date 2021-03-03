@@ -7,6 +7,7 @@ import { Ionicons } from '@expo/vector-icons';
 import HomeView from './components/HomeView';
 import CalcRoot from './CalcRoot';
 import MapRoot from './MapRoot';
+import RecipeView from './components/RecipeView';
 
 export default function App() {
   
@@ -20,6 +21,8 @@ export default function App() {
         iconName = 'md-calculator';
       } else if (route.name === 'MapRoot') {
         iconName = 'md-map';
+      } else if (route.name === 'RecipeView') {
+        iconName = 'md-search'
       }
   
       return <Ionicons name={iconName} size={size} color={color} />;
@@ -33,6 +36,7 @@ export default function App() {
       <Tab.Navigator screenOptions = { screenOptions }>
         <Tab.Screen name='CalcRoot' component={ CalcRoot } options={{ title: 'Calculator' }}/>
         <Tab.Screen name='MapRoot' component={ MapRoot } options={{ title: 'Map' }}/>
+        <Tab.Screen name='RecipeView' component={ RecipeView } options={{ title: 'Recipe' }}/>
         <Tab.Screen name='HomeView' component={ HomeView } options={{ title: 'My home' }}/>
       </Tab.Navigator>
     </NavigationContainer>
